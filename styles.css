@@ -19,6 +19,12 @@ h1 {
     margin-bottom: 1rem;
 }
 
+img {
+    width: 100%; /* or desired width */
+    height: auto;
+    object-fit: contain; /* or 'cover' depending on your design */
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
     h1 {
