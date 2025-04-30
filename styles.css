@@ -654,6 +654,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; /* Safari-specific */
 }
 
 .card-back-step {
