@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiomeTCG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#logo-animation">Logo Animation</a></li>
+                <li><a href="#final-portfolio">Portfolio Idea</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="main-logo">
+            <img src="/vector/DSU.svg" alt="DSU Logo">
+            <h1>Welcome to my Personal Projects</h1>
+            <p>Here you will find...</p>
+        </div></section>
+
+    <hr class="divider">
+
+    <section id="logo-animation">
+        <h2>Logo Animation</h2>
+        <div class="animation-container">
+            <video controls autoplay loop muted>
+                <source src="/videos/DSU_Animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>This animation explains the idea behind the logo, showcasing its meaning.</p>
+        </div>
+    </section>
+
+    <hr class="divider">
+    
+    <section id="final-portfolio">
+        <h2>Portfolio Idea</h2>
+        <div class="sketches-container">
+            <div class="sketch-item">
+                <img src="/images/Portfolio-001.png" alt="Sketch 1">
+                <p>Sketch 1</p>
+            </div>
+            <div class="sketch-item">
+                <img src="/images/Portfolio-002.png" alt="Sketch 2">
+                <p>Sketch 2</p>
+            </div>
+            <div class="sketch-item">
+                <img src="/images/Portfolio-003.png" alt="Sketch 3">
+                <p>Sketch 3</p>
+            </div>
+            <div class="sketch-item">
+                <img src="/images/Portfolio-004.png" alt="Sketch 4">
+                <p>Sketch 4</p>
+            </div>
+        </div>
+    
+        <div class="prototype-container">
+            <h3>Figma Prototype</h3>
+            <video controls autoplay loop muted>
+                <source src="/videos/Figma_Prototype_Portfolio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>This video showcases the interactive prototype created in Figma, bringing the sketches to life.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Daniel Unterreiner. All rights reserved.</p>
+        <p><a href="impressum.html" class="footer-link">Impressum</a></p>
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const burgerMenu = document.querySelector(".burger-menu");
+        const navList = document.querySelector(".nav-list");
+        const navLinks = document.querySelectorAll(".nav-list a");
+
+        // Toggle the menu when the burger menu is clicked
+        burgerMenu.addEventListener("click", () => {
+            navList.classList.toggle("active");
+        });
+
+        // Close the menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navList.classList.remove("active");
+            });
+        });
+    });
+</script>

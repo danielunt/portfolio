@@ -1,0 +1,917 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Optional: Customize headings */
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; /* Use bold for headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem; /* Increase font size on larger screens */
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Sticky Navigation */
+header {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    background: #333; /* Keep the background consistent */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    margin: 0 auto; /* Center the burger menu */
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Styles */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffcc00;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Show burger menu on mobile */
+    }
+
+    .nav-list {
+        display: none; /* Hide navigation by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show navigation when active */
+    }
+
+    .nav-list li {
+        margin: 1rem 0;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Logo Section */
+.main-logo {
+    text-align: center; /* Center the logo and text */
+    margin: 2rem auto; /* Add spacing around the logo section */
+    padding: 1rem;
+}
+
+.main-logo img {
+    max-width: 100%; /* Ensure the logo scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Limit the maximum height for readability */
+    margin-bottom: 1rem; /* Add spacing below the logo */
+    object-fit: contain; /* Ensure the logo fits nicely within its container */
+}
+
+.main-logo h1 {
+    font-size: 2rem; /* Adjust font size for readability */
+    color: #333; /* Dark text color for contrast */
+    margin: 0.5rem 0; /* Add spacing around the heading */
+    font-weight: bold; /* Make the text bold */
+}
+
+.main-logo p {
+    font-size: 1rem; /* Adjust font size for smaller text */
+    color: #666; /* Subtle text color for readability */
+    margin: 0.5rem 0; /* Add spacing around the paragraph */
+    max-width: 600px; /* Limit the width for better readability */
+    line-height: 1.6; /* Improve line spacing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .main-logo h1 {
+        font-size: 2.5rem; /* Increase font size on larger screens */
+    }
+
+    .main-logo p {
+        font-size: 1.2rem; /* Slightly larger text for better readability */
+    }
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between project cards */
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure content stays within the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-card img {
+    width: 100%; /* Make the image take up the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card */
+    object-fit: cover; /* Ensure the image fits nicely */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.project-card a:hover {
+    background: #555; /* Darker background on hover */
+}
+
+/* Hover Effect for Project Cards */
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Divider Styles */
+.divider {
+    border: none;
+    height: 2px;
+    background: #333;
+    margin: 2rem 0;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    object-fit: cover;
+}
+
+/*------------------------------------------------------------------*/
+/* BiomeTCG Projects Section */
+
+/* Logo Styles */
+.main-logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
+/* Logo Comparison Section */
+.logo-comparison {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns, responsive */
+    gap: 2rem; /* Space between the sections */
+    align-items: start; /* Align content at the top */
+    margin-top: 2rem;
+}
+
+.logo-comparison section {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    text-align: center;
+}
+
+.logo-comparison img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Icons Section */
+.icons-grid {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 2rem; /* Space between icons */
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.icon-item {
+    flex: 0 1 100px; /* Allow icons to shrink or grow, with a base width of 100px */
+    text-align: center;
+}
+
+.icon-item img {
+    max-width: 100px; /* Limit the maximum width of the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0.5rem;
+}
+
+.icon-item h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Artwork Gallery */
+.artwork-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.artwork-item {
+    text-align: center;
+}
+
+.artwork-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.artwork-item img:hover {
+    transform: scale(1.05);
+}
+
+.artwork-item h3 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox:target {
+    display: flex; /* Show the lightbox when targeted */
+}
+
+.lightbox-content {
+    position: relative;
+    width: 100%; /* Ensure the content takes up the full width */
+    height: 100%; /* Ensure the content takes up the full height */
+    max-width: 90%; /* Limit the width to 90% of the viewport */
+    max-height: 90%; /* Limit the height to 90% of the viewport */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content img {
+    max-width: 100%; /* Ensure the image does not exceed the viewport width */
+    max-height: 100%; /* Ensure the image does not exceed the viewport height */
+    object-fit: contain; /* Maintain the aspect ratio and ensure the entire image is visible */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1001;
+}
+
+/* Lightbox Navigation Arrows */
+.prev-lightbox,
+.next-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1001;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev-lightbox {
+    left: 20px; /* Position the previous arrow on the left */
+}
+
+.next-lightbox {
+    right: 20px; /* Position the next arrow on the right */
+}
+
+.prev-lightbox:hover,
+.next-lightbox:hover {
+    color: #ccc; /* Optional: Change color on hover */
+}
+
+/* Base Card Layout */
+.base-card-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between items */
+    margin-top: 2rem;
+    text-align: center; /* Center-align content */
+}
+
+.base-item {
+    display: flex;
+    flex-direction: column; /* Stack image and subtitle vertically */
+    align-items: center; /* Center-align image and subtitle */
+}
+
+.base-item img {
+    width: 100%; /* Make the image take up the full width of its container */
+    max-width: 300px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.base-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.base-item h3 {
+    margin-top: 0.5rem; /* Space between image and subtitle */
+    font-size: 1rem; /* Adjust subtitle font size */
+    color: #333; /* Subtitle text color */
+    font-weight: 500; /* Optional: Adjust font weight */
+}
+
+/* Rarity Styles */
+.rarity {
+    display: inline-block;
+    padding: 0.2rem 0.5rem; /* Add padding for the rectangle */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* White text color */
+    margin-right: 0.5rem; /* Add spacing between rectangles */
+}
+
+.rarity.epic {
+    background-color: #800080; /* Purple for Epic */
+}
+
+.rarity.rare {
+    background-color: #0000FF; /* Blue for Rare */
+}
+
+.rarity.uncommon {
+    background-color: #008000; /* Green for Uncommon */
+}
+
+.rarity.common {
+    background-color: #808080; /* Grey for Common */
+}
+
+/* Bare Card Layout */
+.bare-card-layout {
+    display: flex; /* Use flexbox for horizontal alignment */
+    gap: 2rem; /* Space between items */
+    margin-top: 2rem;
+    text-align: center; /* Center-align content */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 1rem; /* Add padding to avoid content being cut off */
+    scroll-snap-type: x mandatory; /* Enable smooth snapping */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #333 #f4f4f4; /* Thumb and track colors */
+}
+
+.bare-item {
+    flex: 0 0 auto; /* Prevent items from shrinking and ensure they stay in a row */
+    display: flex;
+    flex-direction: column; /* Stack image and subtitle vertically */
+    align-items: center; /* Center-align image and subtitle */
+    scroll-snap-align: center; /* Snap items to the center when scrolling */
+}
+
+.bare-item img {
+    width: 100%; /* Make the image take up the full width of its container */
+    max-width: 200px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+@media (min-width: 768px) {
+    .texture-card-layout {
+        display: grid; /* Switch to grid layout on larger screens */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        overflow-x: visible; /* Disable horizontal scrolling */
+    }
+}
+
+.texture-item h3 {
+    margin-top: 0.5rem; /* Space between image and subtitle */
+    font-size: 1rem; /* Adjust subtitle font size */
+    color: #333; /* Subtitle text color */
+    font-weight: 500; /* Optional: Adjust font weight */
+}
+
+/* Center and style the rarity section */
+.rarity-section {
+    text-align: center;
+}
+
+/* Style the rarity spans */
+.rarity {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin: 0.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.rarity.epic {
+    background-color: #800080; /* Purple for Epic */
+}
+
+.rarity.rare {
+    background-color: #0000FF; /* Blue for Rare */
+}
+
+.rarity.uncommon {
+    background-color: #008000; /* Green for Uncommon */
+}
+
+.rarity.common {
+    background-color: #808080; /* Grey for Common */
+}
+
+/* Style the paragraph about Epic cards */
+.rarity-description {
+    text-align: center;
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+    max-width: 600px; /* Limit the width for better readability */
+    line-height: 1.6;
+}
+
+/* Arrow pointing down */
+.arrow-down {
+    width: 0;
+    height: 0;
+    margin: 2rem auto;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #333; /* Arrow color */
+    display: block;
+}
+
+
+.result-item img {
+    width: 100%; /* Make the image take up the full width of its container */
+    max-width: 300px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.result-card-layout {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
+}
+
+.result-box {
+    flex-shrink: 0;
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    animation: scroll 60s linear infinite;
+}
+
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
+
+@keyframes scrollReverse {
+    to {
+        transform: translateX(calc(100% + 2rem)); /* Move to the right */
+    }
+}
+
+/* Card Back Section */
+#Card-Back {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#Card-Back h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.card-back-evolution {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-back-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-back-step img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-back-step h3 {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.card-back-step p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .card-back-evolution {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card-back-step {
+        flex: 1;
+        margin: 0 1rem;
+    }
+}
+
+/* Packaging Showcase */
+.packaging-showcase {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 2rem; /* Add spacing between items */
+    margin-top: 2rem;
+}
+
+.packaging-item {
+    text-align: center; /* Center-align text below each image */
+    max-width: 400px; /* Limit the width of each item */
+}
+
+.packaging-item img {
+    max-width: 100%; /* Ensure the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.packaging-item h3 {
+    font-size: 1rem; /* Adjust font size for subtitles */
+    color: #333; /* Dark text color */
+    margin-top: 0.5rem; /* Add spacing above the subtitle */
+}
+
+/*------------------------------------------------------------------*/
+/* Personal Projects Section */
+
+/* Logo Design Process */
+#logo-design-process {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.design-process {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.design-step {
+    max-width: 300px;
+    text-align: center;
+}
+
+.design-step img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.design-step h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.design-step p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Logo Animation */
+#logo-animation {
+    text-align: center;
+    padding: 2rem;
+}
+
+.animation-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.animation-container video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.animation-container p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Portfolio Evolution Section */
+#portfolio-evolution {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+    margin-top: 2rem;
+}
+
+#portfolio-evolution h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.sketches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between sketches */
+    margin-bottom: 2rem;
+}
+
+.sketch-item {
+    text-align: center;
+}
+
+.sketch-item img {
+    max-width: 100%; /* Ensure the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.sketch-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.prototype-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.prototype-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.prototype-container video {
+    width: 100%;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 1rem;
+}
+
+.prototype-container p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out the elements */
+    align-items: center; /* Align items vertically */
+    padding: 1rem; /* Add padding for spacing */
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9rem; /* Adjust font size */
+}
+
+footer .footer-link {
+    color: #fff; /* White text color for the link */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.9rem; /* Match font size with the text */
+}
+
+footer .footer-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    footer .footer-link {
+        margin-top: 0.5rem; /* Add spacing between stacked elements */
+    }
+}
+
+/* Impressum Section */
+#impressum {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Dark text color */
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd; /* Optional: Add a subtle border at the top */
+}
+
+#impressum h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#impressum p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#impressum a {
+    color: #007BFF; /* Link color */
+    text-decoration: none;
+}
+
+#impressum a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Link */
+.footer-link {
+    color: #fff; /* White text color for the footer link */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

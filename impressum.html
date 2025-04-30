@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="impressum">
+            <h1>Impressum</h1>
+            <p><strong>Owner:</strong> Daniel Unterreiner</p>
+            <p><strong>Address:</strong> Geweygasse 9, 1190 Vienna</p>
+            <p><strong>Email:</strong> <a href="mailto:daniel.unt007@gmail.com">daniel.unt007@gmail.com</a></p>
+            <p><strong>Phone:</strong> +43 660 2307638</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Daniel Unterreiner. All rights reserved.</p>
+        <p><a href="index.html" class="footer-link">Back to Home</a></p>
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const burgerMenu = document.querySelector(".burger-menu");
+        const navList = document.querySelector(".nav-list");
+        const navLinks = document.querySelectorAll(".nav-list a");
+
+        // Toggle the menu when the burger menu is clicked
+        burgerMenu.addEventListener("click", () => {
+            navList.classList.toggle("active");
+        });
+
+        // Close the menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navList.classList.remove("active");
+            });
+        });
+    });
+</script>
